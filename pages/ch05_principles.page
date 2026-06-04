@@ -1,0 +1,249 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>五大设计原则</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 原则 1
+  - elementId: p1-bg
+    elementType: shape
+    bounds: [60, 115, 370, 250]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: p1-num
+    elementType: text
+    bounds: [78, 128, 70, 45]
+    content:
+      fontSize: 36
+      color: "$primary"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>01</strong></p>
+
+  - elementId: p1-title
+    elementType: text
+    bounds: [78, 175, 334, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>关注点分离</strong></p>
+
+  - elementId: p1-desc
+    elementType: text
+    bounds: [78, 213, 334, 135]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>设计（主代理）与构建（子代理）严格分离</p>
+        <p style="margin-top:6px">主代理专注决策与规划，子代理专注执行与实现，两者不可越界</p>
+
+  # 原则 2
+  - elementId: p2-bg
+    elementType: shape
+    bounds: [455, 115, 370, 250]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: p2-num
+    elementType: text
+    bounds: [473, 128, 70, 45]
+    content:
+      fontSize: 36
+      color: "$primary"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>02</strong></p>
+
+  - elementId: p2-title
+    elementType: text
+    bounds: [473, 175, 334, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>格式抽象</strong></p>
+
+  - elementId: p2-desc
+    elementType: text
+    bounds: [473, 213, 334, 135]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>PPTD 作为 AI 友好的中间层，屏蔽 OOXML 复杂度</p>
+        <p style="margin-top:6px">YAML 语法 + 自包含页面 + 主题引用，让 AI 读写 PPT 像写文档一样简单</p>
+
+  # 原则 3
+  - elementId: p3-bg
+    elementType: shape
+    bounds: [850, 115, 370, 250]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: p3-num
+    elementType: text
+    bounds: [868, 128, 70, 45]
+    content:
+      fontSize: 36
+      color: "$primary"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>03</strong></p>
+
+  - elementId: p3-title
+    elementType: text
+    bounds: [868, 175, 334, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>质量内建</strong></p>
+
+  - elementId: p3-desc
+    elementType: text
+    bounds: [868, 213, 334, 135]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>Checker 自动化检测集成在工作流中</p>
+        <p style="margin-top:6px">Error/Warning 分类处理，修复后必须重新验证，确保 0 errors 0 warnings</p>
+
+  # 原则 4
+  - elementId: p4-bg
+    elementType: shape
+    bounds: [60, 390, 565, 250]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: p4-num
+    elementType: text
+    bounds: [78, 403, 70, 45]
+    content:
+      fontSize: 36
+      color: "$accent"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>04</strong></p>
+
+  - elementId: p4-title
+    elementType: text
+    bounds: [78, 450, 400, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>可扩展性</strong></p>
+
+  - elementId: p4-desc
+    elementType: text
+    bounds: [78, 488, 525, 135]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>3×3 模式矩阵覆盖绝大多数 PPT 场景</p>
+        <p style="margin-top:6px">内容模式（Summary/Outline/Search）× 视觉模式（Creative/Reference/Template）灵活组合，无需为每个场景定制独立流程</p>
+
+  # 原则 5
+  - elementId: p5-bg
+    elementType: shape
+    bounds: [655, 390, 565, 250]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: p5-num
+    elementType: text
+    bounds: [673, 403, 70, 45]
+    content:
+      fontSize: 36
+      color: "$accent"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>05</strong></p>
+
+  - elementId: p5-title
+    elementType: text
+    bounds: [673, 450, 400, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>并行效率</strong></p>
+
+  - elementId: p5-desc
+    elementType: text
+    bounds: [673, 488, 525, 135]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>子代理按页面类型分组并行处理</p>
+        <p style="margin-top:6px">修复操作批量并行调用 edit_file，最大化利用多智能体并发能力，缩短整体生成时间</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>18</p>

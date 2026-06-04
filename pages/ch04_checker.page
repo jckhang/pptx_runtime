@@ -1,0 +1,220 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>Checker 检查维度</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 两大问题类别 - Error
+  - elementId: error-bg
+    elementType: shape
+    bounds: [60, 115, 565, 200]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#FF6B6B12"
+
+  - elementId: error-bar
+    elementType: shape
+    bounds: [60, 115, 5, 200]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#FF6B6B"
+
+  - elementId: error-icon
+    elementType: icon
+    bounds: [85, 132, 28, 28]
+    iconName: "fas:circle-xmark"
+    fill:
+      type: solid
+      color: "#FF6B6B"
+
+  - elementId: error-title
+    elementType: text
+    bounds: [122, 130, 300, 32]
+    content:
+      fontSize: 22
+      color: "#FF6B6B"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Error 错误</strong></p>
+
+  - elementId: error-desc
+    elementType: text
+    bounds: [85, 175, 520, 120]
+    content:
+      fontSize: 15
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p><span style="color:#FF6B6B;">&#9632;</span> YAML 语法错误 — 导致文件无法解析</p>
+        <p><span style="color:#FF6B6B;">&#9632;</span> 必填字段缺失 — 转换直接失败</p>
+        <p><span style="color:#FF6B6B;">&#9632;</span> 字段值无效 — 数据格式不匹配</p>
+        <p><span style="color:#FF6B6B;">&#9632;</span> elementId 重复 — 页面内 ID 冲突</p>
+
+  # 两大问题类别 - Warning
+  - elementId: warn-bg
+    elementType: shape
+    bounds: [655, 115, 565, 200]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#F5A62312"
+
+  - elementId: warn-bar
+    elementType: shape
+    bounds: [655, 115, 5, 200]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#F5A623"
+
+  - elementId: warn-icon
+    elementType: icon
+    bounds: [680, 132, 28, 28]
+    iconName: "fas:triangle-exclamation"
+    fill:
+      type: solid
+      color: "#F5A623"
+
+  - elementId: warn-title
+    elementType: text
+    bounds: [717, 130, 300, 32]
+    content:
+      fontSize: 22
+      color: "#F5A623"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Warning 警告</strong></p>
+
+  - elementId: warn-desc
+    elementType: text
+    bounds: [680, 175, 520, 120]
+    content:
+      fontSize: 15
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p><span style="color:#F5A623;">&#9632;</span> TextOverflow — 文本溢出截断</p>
+        <p><span style="color:#F5A623;">&#9632;</span> TextOcclusion — 文本被遮挡</p>
+        <p><span style="color:#F5A623;">&#9632;</span> TextDrift — 文本框偏移</p>
+        <p><span style="color:#F5A623;">&#9632;</span> BoundsOutside — 元素越界</p>
+
+  # 检查维度表格
+  - elementId: dim-label
+    elementType: text
+    bounds: [60, 340, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>CHECK DIMENSIONS</p>
+
+  - elementId: dim-table
+    elementType: table
+    bounds: [60, 375, 1160, 250]
+    columnWidths: [0.22, 0.38, 0.40]
+    rowHeights: [0.18, 0.205, 0.205, 0.205, 0.205]
+    style: "$default"
+    rows:
+      - - content:
+            text: |
+              <p><strong>检查维度</strong></p>
+        - content:
+            text: |
+              <p><strong>检查内容</strong></p>
+        - content:
+            text: |
+              <p><strong>问题示例</strong></p>
+      - - content:
+            text: |
+              <p>格式检查</p>
+        - content:
+            text: |
+              <p>YAML 语法、必填字段、字段值有效性</p>
+        - content:
+            text: |
+              <p>语法解析失败、缺少 elementId</p>
+      - - content:
+            text: |
+              <p>数据验证</p>
+        - content:
+            text: |
+              <p>颜色格式、引用有效性、形状名称</p>
+        - content:
+            text: |
+              <p>$undefined 引用、无效 shapeName</p>
+      - - content:
+            text: |
+              <p>布局检测</p>
+        - content:
+            text: |
+              <p>元素越界、遮挡关系、对齐情况</p>
+        - content:
+            text: |
+              <p>文本被图片遮挡、元素超出画布</p>
+      - - content:
+            text: |
+              <p>文本检测</p>
+        - content:
+            text: |
+              <p>文本宽度/高度溢出、欠填充</p>
+        - content:
+            text: |
+              <p>文字超出文本框、字号过小留白</p>
+
+  # 运行方式提示
+  - elementId: run-bg
+    elementType: shape
+    bounds: [60, 632, 1160, 35]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: run-text
+    elementType: text
+    bounds: [80, 635, 1120, 28]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      text: |
+        <p><span style="color:#3B6BFF;">全量检查</span>  check.sh file.pptd    <span style="color:#7A8B9F;">|</span>    <span style="color:#00D4AA;">指定页面</span>  check.sh file.pptd --pages pages/a.page,pages/b.page</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>15</p>

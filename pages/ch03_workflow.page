@@ -1,0 +1,520 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>工作流全景图</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 7步流程 - 垂直布局流程图
+  # Step 1
+  - elementId: step-1-bg
+    elementType: shape
+    bounds: [60, 115, 350, 55]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: step-1-num
+    elementType: text
+    bounds: [70, 115, 70, 55]
+    content:
+      fontSize: 28
+      color: "#FFFFFF"
+      fontFamily: "Liter"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>01</strong></p>
+
+  - elementId: step-1-text
+    elementType: text
+    bounds: [140, 115, 260, 55]
+    content:
+      fontSize: 18
+      color: "#FFFFFF"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>需求与受众分析</strong></p>
+
+  # 箭头 1→2
+  - elementId: arrow-1
+    elementType: shape
+    bounds: [225, 170, 0, 25]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+
+  # Step 2
+  - elementId: step-2-bg
+    elementType: shape
+    bounds: [60, 195, 350, 55]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+    opacity: 0.85
+
+  - elementId: step-2-num
+    elementType: text
+    bounds: [70, 195, 70, 55]
+    content:
+      fontSize: 28
+      color: "#FFFFFF"
+      fontFamily: "Liter"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>02</strong></p>
+
+  - elementId: step-2-text
+    elementType: text
+    bounds: [140, 195, 260, 55]
+    content:
+      fontSize: 18
+      color: "#FFFFFF"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>确定工作模式</strong></p>
+
+  # 箭头 2→3
+  - elementId: arrow-2
+    elementType: shape
+    bounds: [225, 250, 0, 25]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+
+  # Step 3
+  - elementId: step-3-bg
+    elementType: shape
+    bounds: [60, 275, 350, 55]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: step-3-num
+    elementType: text
+    bounds: [70, 275, 70, 55]
+    content:
+      fontSize: 28
+      color: "#FFFFFF"
+      fontFamily: "Liter"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>03</strong></p>
+
+  - elementId: step-3-text
+    elementType: text
+    bounds: [140, 275, 260, 55]
+    content:
+      fontSize: 18
+      color: "#FFFFFF"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>视觉设计</strong></p>
+
+  - elementId: step-3-badge
+    elementType: text
+    bounds: [420, 285, 120, 35]
+    content:
+      fontSize: 13
+      color: "$accent"
+      fontFamily: "Liter"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>→ design.md</p>
+
+  # 箭头 3→4
+  - elementId: arrow-3
+    elementType: shape
+    bounds: [225, 330, 0, 25]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+
+  # Step 4
+  - elementId: step-4-bg
+    elementType: shape
+    bounds: [60, 355, 350, 55]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+    opacity: 0.85
+
+  - elementId: step-4-num
+    elementType: text
+    bounds: [70, 355, 70, 55]
+    content:
+      fontSize: 28
+      color: "#FFFFFF"
+      fontFamily: "Liter"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>04</strong></p>
+
+  - elementId: step-4-text
+    elementType: text
+    bounds: [140, 355, 260, 55]
+    content:
+      fontSize: 18
+      color: "#FFFFFF"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>内容设计</strong></p>
+
+  - elementId: step-4-badge
+    elementType: text
+    bounds: [420, 365, 130, 35]
+    content:
+      fontSize: 13
+      color: "$accent"
+      fontFamily: "Liter"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>→ outline.md</p>
+
+  # 箭头 4→5
+  - elementId: arrow-4
+    elementType: shape
+    bounds: [225, 410, 0, 25]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+
+  # Step 5
+  - elementId: step-5-bg
+    elementType: shape
+    bounds: [60, 435, 350, 55]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#4A5CFF"
+
+  - elementId: step-5-num
+    elementType: text
+    bounds: [70, 435, 70, 55]
+    content:
+      fontSize: 28
+      color: "#FFFFFF"
+      fontFamily: "Liter"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>05</strong></p>
+
+  - elementId: step-5-text
+    elementType: text
+    bounds: [140, 435, 260, 55]
+    content:
+      fontSize: 18
+      color: "#FFFFFF"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>生成演示文稿</strong></p>
+
+  - elementId: step-5-badge
+    elementType: text
+    bounds: [420, 445, 160, 35]
+    content:
+      fontSize: 13
+      color: "#4A5CFF"
+      fontFamily: "Liter"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>→ .pptd + .page</p>
+
+  # 箭头 5→6
+  - elementId: arrow-5
+    elementType: shape
+    bounds: [225, 490, 0, 25]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "#4A5CFF"
+
+  # Step 6
+  - elementId: step-6-bg
+    elementType: shape
+    bounds: [60, 515, 350, 55]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#4A5CFF"
+    opacity: 0.85
+
+  - elementId: step-6-num
+    elementType: text
+    bounds: [70, 515, 70, 55]
+    content:
+      fontSize: 28
+      color: "#FFFFFF"
+      fontFamily: "Liter"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>06</strong></p>
+
+  - elementId: step-6-text
+    elementType: text
+    bounds: [140, 515, 260, 55]
+    content:
+      fontSize: 18
+      color: "#FFFFFF"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>检查与修复</strong></p>
+
+  - elementId: step-6-badge
+    elementType: text
+    bounds: [420, 525, 130, 35]
+    content:
+      fontSize: 13
+      color: "#4A5CFF"
+      fontFamily: "Liter"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>→ checker</p>
+
+  # 箭头 6→7
+  - elementId: arrow-6
+    elementType: shape
+    bounds: [225, 570, 0, 25]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "#4A5CFF"
+
+  # Step 7
+  - elementId: step-7-bg
+    elementType: shape
+    bounds: [60, 595, 350, 55]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 2
+      color: "$primary"
+
+  - elementId: step-7-num
+    elementType: text
+    bounds: [70, 595, 70, 55]
+    content:
+      fontSize: 28
+      color: "$primary"
+      fontFamily: "Liter"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>07</strong></p>
+
+  - elementId: step-7-text
+    elementType: text
+    bounds: [140, 595, 260, 55]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>交付 .pptd 文件</strong></p>
+
+  # 右侧说明区域
+  - elementId: right-label
+    elementType: text
+    bounds: [580, 115, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>WORKFLOW DETAILS</p>
+
+  # 说明卡片 1
+  - elementId: detail-1-bg
+    elementType: shape
+    bounds: [580, 150, 640, 110]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: detail-1-bar
+    elementType: shape
+    bounds: [580, 150, 4, 110]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: detail-1-title
+    elementType: text
+    bounds: [600, 158, 300, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Step 1-2：分析阶段</strong></p>
+
+  - elementId: detail-1-desc
+    elementType: text
+    bounds: [600, 190, 600, 55]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      text: |
+        <p>分析语言需求、参考材料、页数要求、内容要求、视觉要求、目标受众</p>
+        <p>确定内容模式（Summary/Outline/Search）和视觉模式（Creative/Reference/Template）</p>
+
+  # 说明卡片 2
+  - elementId: detail-2-bg
+    elementType: shape
+    bounds: [580, 275, 640, 110]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: detail-2-bar
+    elementType: shape
+    bounds: [580, 275, 4, 110]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: detail-2-title
+    elementType: text
+    bounds: [600, 283, 300, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Step 3-4：设计阶段</strong></p>
+
+  - elementId: detail-2-desc
+    elementType: text
+    bounds: [600, 315, 600, 55]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      text: |
+        <p>视觉设计 → 产出 design.md（风格、色彩、字体、布局、主题定义）</p>
+        <p>内容设计 → 产出 outline.md（每页标题、要点、内容规划）</p>
+
+  # 说明卡片 3
+  - elementId: detail-3-bg
+    elementType: shape
+    bounds: [580, 400, 640, 110]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: detail-3-bar
+    elementType: shape
+    bounds: [580, 400, 4, 110]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#4A5CFF"
+
+  - elementId: detail-3-title
+    elementType: text
+    bounds: [600, 408, 300, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Step 5-7：构建阶段</strong></p>
+
+  - elementId: detail-3-desc
+    elementType: text
+    bounds: [600, 440, 600, 55]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      text: |
+        <p>生成 .pptd 主入口文件 → 创建 .page 页面文件（子代理执行）</p>
+        <p>运行 check.sh 检查 → 修复问题 → 交付 .pptd 文件</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>11</p>

@@ -1,0 +1,235 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>PPTD 设计哲学</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 定义说明
+  - elementId: def-bg
+    elementType: shape
+    bounds: [60, 110, 1160, 60]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: def-bar
+    elementType: shape
+    bounds: [60, 110, 4, 60]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: def-text
+    elementType: text
+    bounds: [84, 118, 1110, 46]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      align: [left, middle]
+      text: |
+        <p><strong style="color:#3B6BFF;">PPTD</strong> = Presentation Description，面向 AI 设计的演示文稿描述语言，是 OOXML 的简化抽象层</p>
+
+  # 四大设计原则 - 卡片 1
+  - elementId: card-1-bg
+    elementType: shape
+    bounds: [60, 195, 565, 220]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: card-1-num
+    elementType: text
+    bounds: [80, 210, 60, 40]
+    content:
+      fontSize: 32
+      color: "$primary"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>01</strong></p>
+
+  - elementId: card-1-title
+    elementType: text
+    bounds: [145, 215, 300, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>YAML 语法</strong></p>
+
+  - elementId: card-1-desc
+    elementType: text
+    bounds: [80, 260, 525, 135]
+    content:
+      fontSize: 16
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>人类可读、AI 易写，完全避免直接操作 XML 的复杂度</p>
+        <p style="margin-top:8px">使用 YAML 的块标量（|）处理富文本中的 HTML 属性，天然防转义错误</p>
+
+  # 四大设计原则 - 卡片 2
+  - elementId: card-2-bg
+    elementType: shape
+    bounds: [655, 195, 565, 220]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: card-2-num
+    elementType: text
+    bounds: [675, 210, 60, 40]
+    content:
+      fontSize: 32
+      color: "$primary"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>02</strong></p>
+
+  - elementId: card-2-title
+    elementType: text
+    bounds: [740, 215, 300, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>自包含页面</strong></p>
+
+  - elementId: card-2-desc
+    elementType: text
+    bounds: [675, 260, 525, 135]
+    content:
+      fontSize: 16
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>每个 .page 文件独立描述完整页面</p>
+        <p style="margin-top:8px">不依赖复杂的 Master/Slide Layout 继承机制，页面即文件，文件即页面</p>
+
+  # 四大设计原则 - 卡片 3
+  - elementId: card-3-bg
+    elementType: shape
+    bounds: [60, 435, 565, 220]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: card-3-num
+    elementType: text
+    bounds: [80, 450, 60, 40]
+    content:
+      fontSize: 32
+      color: "$primary"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>03</strong></p>
+
+  - elementId: card-3-title
+    elementType: text
+    bounds: [145, 455, 300, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>所见即所得</strong></p>
+
+  - elementId: card-3-desc
+    elementType: text
+    bounds: [80, 500, 525, 135]
+    content:
+      fontSize: 16
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>元素位置（bounds）、样式（fill/border/shadow）、内容（text）一目了然</p>
+        <p style="margin-top:8px">无需理解 OOXML 的复杂嵌套关系，直接描述最终视觉效果</p>
+
+  # 四大设计原则 - 卡片 4
+  - elementId: card-4-bg
+    elementType: shape
+    bounds: [655, 435, 565, 220]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: card-4-num
+    elementType: text
+    bounds: [675, 450, 60, 40]
+    content:
+      fontSize: 32
+      color: "$primary"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>04</strong></p>
+
+  - elementId: card-4-title
+    elementType: text
+    bounds: [740, 455, 300, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>主题系统</strong></p>
+
+  - elementId: card-4-desc
+    elementType: text
+    bounds: [675, 500, 525, 135]
+    content:
+      fontSize: 16
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>通过 $ 前缀引用（如 $primary、$title）实现颜色与样式的统一管理</p>
+        <p style="margin-top:8px">修改一处主题定义，全局自动生效，告别重复硬编码</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>07</p>

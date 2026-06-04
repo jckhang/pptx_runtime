@@ -1,0 +1,146 @@
+pageType: cover
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 左侧装饰竖线
+  - elementId: deco-line
+    elementType: shape
+    bounds: [60, 180, 4, 360]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  # 主标题
+  - elementId: main-title
+    elementType: text
+    bounds: [100, 200, 580, 130]
+    content:
+      style: "$title"
+      lineHeight: 1.3
+      text: |
+        <p><strong>PPTX Swarm</strong></p>
+        <p><strong>实现方式详解</strong></p>
+
+  # 副标题
+  - elementId: subtitle
+    elementType: text
+    bounds: [100, 350, 560, 40]
+    content:
+      style: "$subtitle"
+      text: |
+        <p>多智能体协作的 PPT 生成系统架构解析</p>
+
+  # 日期
+  - elementId: date-text
+    elementType: text
+    bounds: [100, 410, 200, 30]
+    content:
+      style: "$caption"
+      text: |
+        <p>2026 年 6 月</p>
+
+  # 右侧装饰 - 节点圆 1
+  - elementId: node-1
+    elementType: shape
+    bounds: [820, 220, 24, 24]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+    opacity: 0.9
+
+  # 右侧装饰 - 节点圆 2
+  - elementId: node-2
+    elementType: shape
+    bounds: [1020, 340, 32, 32]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$accent"
+    opacity: 0.8
+
+  # 右侧装饰 - 节点圆 3
+  - elementId: node-3
+    elementType: shape
+    bounds: [920, 480, 20, 20]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$secondary"
+    opacity: 0.7
+
+  # 右侧装饰 - 节点圆 4
+  - elementId: node-4
+    elementType: shape
+    bounds: [1100, 200, 16, 16]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$primary"
+    opacity: 0.5
+
+  # 连接线 1-2
+  - elementId: conn-1
+    elementType: shape
+    bounds: [844, 232, 188, 120]
+    shapeName: straightConnector1
+    border:
+      style: solid
+      width: 1.5
+      color: "$primary"
+    opacity: 0.4
+
+  # 连接线 2-3
+  - elementId: conn-2
+    elementType: shape
+    bounds: [940, 360, 0, 120]
+    shapeName: straightConnector1
+    border:
+      style: solid
+      width: 1.5
+      color: "$accent"
+    opacity: 0.4
+
+  # 连接线 1-3
+  - elementId: conn-3
+    elementType: shape
+    bounds: [844, 244, 96, 240]
+    shapeName: straightConnector1
+    border:
+      style: solid
+      width: 1
+      color: "$secondary"
+    opacity: 0.3
+
+  # 连接线 4-2
+  - elementId: conn-4
+    elementType: shape
+    bounds: [1108, 216, -72, 132]
+    shapeName: straightConnector1
+    border:
+      style: solid
+      width: 1
+      color: "$primary"
+    opacity: 0.3
+
+  # 右下角装饰大圆环
+  - elementId: deco-ring
+    elementType: shape
+    bounds: [1050, 420, 200, 200]
+    shapeName: donut
+    adjustments: [45000]
+    fill:
+      type: solid
+      color: "$primary"
+    opacity: 0.08
+
+  # 底部品牌标识
+  - elementId: brand
+    elementType: text
+    bounds: [60, 670, 300, 24]
+    content:
+      style: "$caption"
+      text: |
+        <p>PPTX Swarm Architecture Deep Dive</p>

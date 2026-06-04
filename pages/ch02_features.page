@@ -1,0 +1,473 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>PPTD 功能特性</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 六大元素类型标题
+  - elementId: elem-label
+    elementType: text
+    bounds: [60, 105, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>ELEMENT TYPES</p>
+
+  # 元素卡片 1 - Text
+  - elementId: e1-bg
+    elementType: shape
+    bounds: [60, 140, 180, 148]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: e1-icon
+    elementType: icon
+    bounds: [136, 155, 28, 28]
+    iconName: "fas:font"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: e1-title
+    elementType: text
+    bounds: [60, 195, 180, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Text 文本</strong></p>
+
+  - elementId: e1-desc
+    elementType: text
+    bounds: [70, 225, 160, 50]
+    content:
+      fontSize: 12
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.4
+      align: [center, top]
+      text: |
+        <p>富文本 HTML</p>
+        <p>LaTeX 公式</p>
+
+  # 元素卡片 2 - Shape
+  - elementId: e2-bg
+    elementType: shape
+    bounds: [260, 140, 180, 148]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: e2-icon
+    elementType: icon
+    bounds: [336, 155, 28, 28]
+    iconName: "fas:shapes"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: e2-title
+    elementType: text
+    bounds: [260, 195, 180, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Shape 形状</strong></p>
+
+  - elementId: e2-desc
+    elementType: text
+    bounds: [270, 225, 160, 50]
+    content:
+      fontSize: 12
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.4
+      align: [center, top]
+      text: |
+        <p>177 种预设形状</p>
+        <p>自定义路径</p>
+
+  # 元素卡片 3 - Image
+  - elementId: e3-bg
+    elementType: shape
+    bounds: [460, 140, 180, 148]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: e3-icon
+    elementType: icon
+    bounds: [536, 155, 28, 28]
+    iconName: "fas:image"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: e3-title
+    elementType: text
+    bounds: [460, 195, 180, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Image 图片</strong></p>
+
+  - elementId: e3-desc
+    elementType: text
+    bounds: [470, 225, 160, 50]
+    content:
+      fontSize: 12
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.4
+      align: [center, top]
+      text: |
+        <p>裁剪 / 填充</p>
+        <p>形状遮罩</p>
+
+  # 元素卡片 4 - Icon
+  - elementId: e4-bg
+    elementType: shape
+    bounds: [660, 140, 180, 148]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: e4-icon
+    elementType: icon
+    bounds: [736, 155, 28, 28]
+    iconName: "fas:icons"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: e4-title
+    elementType: text
+    bounds: [660, 195, 180, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Icon 图标</strong></p>
+
+  - elementId: e4-desc
+    elementType: text
+    bounds: [670, 225, 160, 50]
+    content:
+      fontSize: 12
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.4
+      align: [center, top]
+      text: |
+        <p>Font Awesome 7.x</p>
+        <p>fas / far / fab</p>
+
+  # 元素卡片 5 - Table
+  - elementId: e5-bg
+    elementType: shape
+    bounds: [860, 140, 180, 148]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: e5-icon
+    elementType: icon
+    bounds: [936, 155, 28, 28]
+    iconName: "fas:table"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: e5-title
+    elementType: text
+    bounds: [860, 195, 180, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Table 表格</strong></p>
+
+  - elementId: e5-desc
+    elementType: text
+    bounds: [870, 225, 160, 50]
+    content:
+      fontSize: 12
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.4
+      align: [center, top]
+      text: |
+        <p>合并单元格</p>
+        <p>主题样式</p>
+
+  # 元素卡片 6 - Chart
+  - elementId: e6-bg
+    elementType: shape
+    bounds: [1060, 140, 160, 148]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: e6-icon
+    elementType: icon
+    bounds: [1126, 155, 28, 28]
+    iconName: "fas:chart-pie"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: e6-title
+    elementType: text
+    bounds: [1060, 195, 160, 26]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Chart 图表</strong></p>
+
+  - elementId: e6-desc
+    elementType: text
+    bounds: [1068, 225, 144, 50]
+    content:
+      fontSize: 12
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.4
+      align: [center, top]
+      text: |
+        <p>8 种图表类型</p>
+        <p>数据驱动</p>
+
+  # 样式系统区域标题
+  - elementId: style-label
+    elementType: text
+    bounds: [60, 295, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>STYLE SYSTEM</p>
+
+  # 样式卡片 1 - Fill
+  - elementId: s1-bg
+    elementType: shape
+    bounds: [60, 330, 370, 165]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: s1-bar
+    elementType: shape
+    bounds: [60, 330, 4, 165]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: s1-title
+    elementType: text
+    bounds: [80, 342, 200, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Fill 填充</strong></p>
+
+  - elementId: s1-desc
+    elementType: text
+    bounds: [80, 378, 330, 108]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p><span style="color:#3B6BFF;">&#9632;</span> 纯色填充 solid</p>
+        <p><span style="color:#00D4AA;">&#9632;</span> 渐变填充 gradient</p>
+        <p><span style="color:#7A8B9F;">&#9632;</span> 图片填充 image</p>
+
+  # 样式卡片 2 - Border
+  - elementId: s2-bg
+    elementType: shape
+    bounds: [455, 330, 370, 165]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: s2-bar
+    elementType: shape
+    bounds: [455, 330, 4, 165]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: s2-title
+    elementType: text
+    bounds: [475, 342, 200, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Border 边框</strong></p>
+
+  - elementId: s2-desc
+    elementType: text
+    bounds: [475, 378, 330, 108]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>实线 solid / 虚线 dash</p>
+        <p>点线 dot / 无边框 none</p>
+        <p>支持主题颜色引用</p>
+
+  # 样式卡片 3 - Shadow
+  - elementId: s3-bg
+    elementType: shape
+    bounds: [850, 330, 370, 165]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: s3-bar
+    elementType: shape
+    bounds: [850, 330, 4, 165]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: s3-title
+    elementType: text
+    bounds: [870, 342, 200, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Shadow 阴影</strong></p>
+
+  - elementId: s3-desc
+    elementType: text
+    bounds: [870, 378, 330, 108]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p>blur 模糊半径</p>
+        <p>color 颜色（支持透明度）</p>
+        <p>offset 偏移量 [x, y]</p>
+
+  # 底部关键约束
+  - elementId: constraint-bg
+    elementType: shape
+    bounds: [60, 525, 1160, 90]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B6BFF12"
+
+  - elementId: constraint-bar
+    elementType: shape
+    bounds: [60, 525, 4, 85]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: constraint-icon
+    elementType: icon
+    bounds: [82, 545, 22, 22]
+    iconName: "fas:lock"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: constraint-text
+    elementType: text
+    bounds: [116, 533, 1088, 78]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      align: [left, middle]
+      text: |
+        <p><strong>核心约束</strong>：禁止直接操作 .pptx 文件，所有操作针对 .pptd 进行</p>
+        <p>用户在前端点击"导出"按钮将 .pptd 转换为 .pptx</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>08</p>

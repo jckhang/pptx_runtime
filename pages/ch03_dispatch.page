@@ -1,0 +1,275 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>子代理任务派发</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 左侧：子代理创建规范
+  - elementId: spec-label
+    elementType: text
+    bounds: [60, 110, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>SUB-AGENT SPECIFICATION</p>
+
+  - elementId: spec-bg
+    elementType: shape
+    bounds: [60, 145, 560, 400]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: spec-bar
+    elementType: shape
+    bounds: [60, 145, 4, 400]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: spec-content
+    elementType: text
+    bounds: [82, 158, 520, 380]
+    content:
+      fontSize: 15
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.75
+      text: |
+        <p><strong style="color:#3B6BFF;">创建子代理时必须声明：</strong></p>
+        <p style="margin-top:6px">1. 身份为 <strong>pptx page building sub-agent</strong></p>
+        <p>2. 主代理已完成 design.md、outline.md、.pptd</p>
+        <p>3. 目标为构建 x 个 .page 文件</p>
+        <p style="margin-top:10px"><strong style="color:#3B6BFF;">执行前必须阅读的 6 份文件：</strong></p>
+        <p style="margin-top:6px">a. format/pptd.md — 格式定义</p>
+        <p>b. design/profiles/xxxx.md — 场景预设</p>
+        <p>c. design.md — 视觉设计文档</p>
+        <p>d. .pptd 主入口文件</p>
+        <p>e. outline.md — 内容大纲</p>
+        <p>f. subagent/attention.md — 注意事项</p>
+
+  # 右侧：任务分配逻辑
+  - elementId: dispatch-label
+    elementType: text
+    bounds: [660, 110, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>TASK ASSIGNMENT LOGIC</p>
+
+  # 分配卡片 1
+  - elementId: da-1-bg
+    elementType: shape
+    bounds: [660, 145, 560, 100]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: da-1-bar
+    elementType: shape
+    bounds: [660, 145, 4, 100]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: da-1-icon
+    elementType: icon
+    bounds: [680, 165, 24, 24]
+    iconName: "fas:object-group"
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: da-1-title
+    elementType: text
+    bounds: [714, 162, 300, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>按类型分组</strong></p>
+
+  - elementId: da-1-desc
+    elementType: text
+    bounds: [680, 198, 520, 35]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      text: |
+        <p>相似页面分配给同一子代理，减少上下文切换</p>
+
+  # 分配卡片 2
+  - elementId: da-2-bg
+    elementType: shape
+    bounds: [660, 260, 560, 100]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: da-2-bar
+    elementType: shape
+    bounds: [660, 260, 4, 100]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: da-2-icon
+    elementType: icon
+    bounds: [680, 280, 24, 24]
+    iconName: "fas:user-pen"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: da-2-title
+    elementType: text
+    bounds: [714, 277, 300, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>写作模式指定</strong></p>
+
+  - elementId: da-2-desc
+    elementType: text
+    bounds: [680, 313, 520, 35]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      text: |
+        <p>Summary Writing（有内容来源）vs Search Writing（需自行搜索）</p>
+
+  # 分配卡片 3
+  - elementId: da-3-bg
+    elementType: shape
+    bounds: [660, 375, 560, 100]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: da-3-bar
+    elementType: shape
+    bounds: [660, 375, 4, 100]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: da-3-icon
+    elementType: icon
+    bounds: [680, 395, 24, 24]
+    iconName: "fas:file-export"
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: da-3-title
+    elementType: text
+    bounds: [714, 392, 300, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>文件路径传递</strong></p>
+
+  - elementId: da-3-desc
+    elementType: text
+    bounds: [680, 428, 520, 35]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      text: |
+        <p>传递文件路径让子代理自行读取，禁止摘要转述</p>
+
+  # 底部约束
+  - elementId: constraint-bg
+    elementType: shape
+    bounds: [60, 565, 1160, 48]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#FF6B6B10"
+
+  - elementId: constraint-bar
+    elementType: shape
+    bounds: [60, 565, 4, 48]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#FF6B6B"
+
+  - elementId: constraint-icon
+    elementType: icon
+    bounds: [80, 578, 22, 22]
+    iconName: "fas:triangle-exclamation"
+    fill:
+      type: solid
+      color: "#FF6B6B"
+
+  - elementId: constraint-text
+    elementType: text
+    bounds: [114, 570, 1086, 38]
+    content:
+      fontSize: 15
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      align: [left, middle]
+      text: |
+        <p><strong>硬性约束</strong>：子代理禁止创建子代理，禁止修改 .pptd 主文件，仅可生成 .page 文件</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>13</p>

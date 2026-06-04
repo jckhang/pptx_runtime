@@ -1,0 +1,302 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>代理数量控制策略</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 决策阈值 KPI 区域
+  - elementId: kpi-label
+    elementType: text
+    bounds: [60, 110, 300, 28]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      letterSpacing: 2
+      wrap: false
+      text: |
+        <p>DECISION THRESHOLD</p>
+
+  # KPI 1
+  - elementId: kpi-1-num
+    elementType: text
+    bounds: [60, 145, 200, 60]
+    content:
+      style: "$kpi"
+      fontSize: 48
+      wrap: false
+      text: |
+        <p><strong>≤20</strong></p>
+
+  - elementId: kpi-1-label
+    elementType: text
+    bounds: [60, 210, 250, 60]
+    content:
+      fontSize: 16
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      text: |
+        <p>单 PPT 页面数阈值</p>
+        <p><span style="color:#00D4AA;">主代理自行完成</span></p>
+
+  # 分隔线
+  - elementId: kpi-divider
+    elementType: shape
+    bounds: [340, 150, 1, 110]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # KPI 2
+  - elementId: kpi-2-num
+    elementType: text
+    bounds: [380, 145, 200, 60]
+    content:
+      style: "$kpi"
+      fontSize: 48
+      color: "$accent"
+      wrap: false
+      text: |
+        <p><strong>>20</strong></p>
+
+  - elementId: kpi-2-label
+    elementType: text
+    bounds: [380, 210, 250, 60]
+    content:
+      fontSize: 16
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      text: |
+        <p>超过阈值或多 PPT</p>
+        <p><span style="color:#3B6BFF;">启用子代理协作</span></p>
+
+  # 右侧说明卡片
+  - elementId: explain-bg
+    elementType: shape
+    bounds: [700, 110, 520, 185]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: explain-bar
+    elementType: shape
+    bounds: [700, 110, 4, 185]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: explain-text
+    elementType: text
+    bounds: [724, 125, 476, 158]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.7
+      text: |
+        <p><strong style="color:#00D4AA;">单 PPT ≤ 20 页</strong>：主代理直接生成所有 .page 文件，不启用子代理，减少协调开销</p>
+        <p style="margin-top:8px"><strong style="color:#3B6BFF;">单 PPT > 20 页</strong>：按页面类型分组，每组最多 20 页，分配给不同子代理并行处理</p>
+
+  # 子代理分组策略
+  - elementId: group-title
+    elementType: text
+    bounds: [60, 300, 400, 32]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>子代理分组策略</strong></p>
+
+  # 分组卡片 1
+  - elementId: group-1-bg
+    elementType: shape
+    bounds: [60, 350, 370, 140]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: group-1-icon
+    elementType: icon
+    bounds: [80, 370, 24, 24]
+    iconName: "fas:layer-group"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: group-1-title
+    elementType: text
+    bounds: [114, 368, 300, 30]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>子代理 A — 结构页</strong></p>
+
+  - elementId: group-1-desc
+    elementType: text
+    bounds: [80, 410, 330, 65]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      text: |
+        <p>封面 + 目录 + 所有章节过渡页 + 结束页</p>
+        <p>保持视觉一致性最高</p>
+
+  # 分组卡片 2
+  - elementId: group-2-bg
+    elementType: shape
+    bounds: [455, 350, 370, 140]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: group-2-icon
+    elementType: icon
+    bounds: [475, 370, 24, 24]
+    iconName: "fas:file-lines"
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: group-2-title
+    elementType: text
+    bounds: [509, 368, 300, 30]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>子代理 B/C/D — 内容页</strong></p>
+
+  - elementId: group-2-desc
+    elementType: text
+    bounds: [475, 410, 330, 65]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      text: |
+        <p>按主题分组的内容页（每组 ≤20 页）</p>
+        <p>相似页面分配给同一子代理</p>
+
+  # 分组卡片 3
+  - elementId: group-3-bg
+    elementType: shape
+    bounds: [850, 350, 370, 140]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: group-3-icon
+    elementType: icon
+    bounds: [870, 370, 24, 24]
+    iconName: "fas:arrows-split-up-and-left"
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: group-3-title
+    elementType: text
+    bounds: [904, 368, 300, 30]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>多 PPT 并行</strong></p>
+
+  - elementId: group-3-desc
+    elementType: text
+    bounds: [870, 410, 330, 65]
+    content:
+      fontSize: 15
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      text: |
+        <p>先生成所有 PPT 的 .pptd 文件</p>
+        <p>再统一创建子代理分配任务</p>
+
+  # 底部关键规则
+  - elementId: bottom-rule-bg
+    elementType: shape
+    bounds: [60, 520, 1160, 80]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#00D4AA10"
+
+  - elementId: bottom-rule-bar
+    elementType: shape
+    bounds: [60, 520, 4, 80]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: bottom-rule-icon
+    elementType: icon
+    bounds: [84, 540, 24, 24]
+    iconName: "fas:lightbulb"
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: bottom-rule-text
+    elementType: text
+    bounds: [120, 530, 1080, 60]
+    content:
+      fontSize: 16
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+      align: [left, middle]
+      text: |
+        <p><strong>最佳实践</strong>：优先将相似页面分配给同一子代理（如一个子代理负责所有章节过渡页），</p>
+        <p>而非按页码顺序切割，这样可减少上下文切换、保证视觉一致性。</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>05</p>

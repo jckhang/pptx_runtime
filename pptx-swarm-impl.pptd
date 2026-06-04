@@ -1,0 +1,101 @@
+title: PPTX Swarm 实现方式详解
+size: [1280, 720]
+theme:
+  colors:
+    primary: "#3B6BFF"
+    secondary: "#7A8B9F"
+    accent: "#00D4AA"
+    background: "#0F1923"
+    surface: "#1A2633"
+    text: "#E8ECF1"
+    textMuted: "#7A8B9F"
+    border: "#2A3A4A"
+    divider: "#7A8B9F4D"
+    chart1: "#3B6BFF"
+    chart2: "#00D4AA"
+    chart3: "#7A8B9F"
+    chart4: "#E8ECF1"
+  textStyles:
+    title:
+      fontSize: 44
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+    pageTitle:
+      fontSize: 28
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+    subtitle:
+      fontSize: 22
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+    body:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+    caption:
+      fontSize: 13
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+    kpi:
+      fontSize: 48
+      color: "$primary"
+      fontFamily: "Liter, alimamashuheiti"
+    highlight:
+      fontSize: 18
+      color: "$accent"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.6
+  tableStyles:
+    default:
+      fontSize: 16
+      fontFamily: "Liter, MiSans"
+      headerFill: "$primary"
+      headerColor: "#FFFFFF"
+      headerBold: true
+      headerBorder:
+        - null
+        - null
+        - style: solid
+          width: 2
+          color: "$primary"
+        - null
+      bodyFill:
+        - "$background"
+        - "$surface"
+      bodyColor: "$text"
+      bodyBorder:
+        - null
+        - null
+        - style: solid
+          width: 1
+          color: "$border"
+        - null
+      lastRowBorder:
+        - null
+        - null
+        - style: solid
+          width: 2
+          color: "$primary"
+        - null
+      border: null
+pages:
+  - pages/cover.page
+  - pages/toc.page
+  - pages/ch01_title.page
+  - pages/ch01_roles.page
+  - pages/ch01_agent_control.page
+  - pages/ch02_title.page
+  - pages/ch02_philosophy.page
+  - pages/ch02_features.page
+  - pages/ch02_structure.page
+  - pages/ch03_title.page
+  - pages/ch03_workflow.page
+  - pages/ch03_matrix.page
+  - pages/ch03_dispatch.page
+  - pages/ch04_title.page
+  - pages/ch04_checker.page
+  - pages/ch04_fix.page
+  - pages/ch05_title.page
+  - pages/ch05_principles.page
+  - pages/final.page

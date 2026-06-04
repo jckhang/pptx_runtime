@@ -1,0 +1,181 @@
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 页面标题
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 40, 700, 40]
+    content:
+      style: "$pageTitle"
+      wrap: false
+      text: |
+        <p><strong>PPTD 文件结构</strong></p>
+
+  # 标题装饰线
+  - elementId: title-line
+    elementType: shape
+    bounds: [60, 88, 1160, 1]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$divider"
+
+  # 左侧：文件树状结构
+  - elementId: tree-label
+    elementType: text
+    bounds: [60, 105, 300, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>DIRECTORY STRUCTURE</p>
+
+  - elementId: tree-bg
+    elementType: shape
+    bounds: [60, 140, 520, 420]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: tree-code
+    elementType: text
+    bounds: [80, 155, 480, 405]
+    content:
+      fontSize: 14
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.8
+      text: |
+        <p><span style="color:#7A8B9F;">project/</span></p>
+        <p>  <span style="color:#3B6BFF;">&#9679;</span> <strong>presentation.pptd</strong>    <span style="color:#7A8B9F;"># 主入口文件</span></p>
+        <p>  <span style="color:#7A8B9F;">&#9507; title: 演示文稿标题</span></p>
+        <p>  <span style="color:#7A8B9F;">&#9507; size: [1280, 720]</span></p>
+        <p>  <span style="color:#7A8B9F;">&#9507; theme: { colors, textStyles }</span></p>
+        <p>  <span style="color:#7A8B9F;">&#9495; pages: [ ... ]</span></p>
+        <p>  </p>
+        <p>  <span style="color:#7A8B9F;">pages/</span>                  <span style="color:#7A8B9F;"># 页面文件目录</span></p>
+        <p>    <span style="color:#00D4AA;">&#9679;</span> cover.page          <span style="color:#7A8B9F;"># 封面页</span></p>
+        <p>    <span style="color:#00D4AA;">&#9679;</span> toc.page            <span style="color:#7A8B9F;"># 目录页</span></p>
+        <p>    <span style="color:#00D4AA;">&#9679;</span> chapter_01.page     <span style="color:#7A8B9F;"># 章节页</span></p>
+        <p>    <span style="color:#00D4AA;">&#9679;</span> content_01.page     <span style="color:#7A8B9F;"># 内容页</span></p>
+        <p>    <span style="color:#00D4AA;">&#9679;</span> ...</p>
+
+  # 右侧：.pptd 主入口结构
+  - elementId: entry-label
+    elementType: text
+    bounds: [620, 105, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>.pptd MAIN ENTRY</p>
+
+  - elementId: entry-bg
+    elementType: shape
+    bounds: [620, 140, 600, 200]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: entry-code
+    elementType: text
+    bounds: [640, 152, 560, 185]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.8
+      text: |
+        <p><span style="color:#7A8B9F;">title:</span> My Presentation</p>
+        <p><span style="color:#7A8B9F;">size:</span> [1280, 720]</p>
+        <p><span style="color:#7A8B9F;">theme:</span></p>
+        <p>  <span style="color:#7A8B9F;">colors:</span> { primary: "#3B6BFF", ... }</p>
+        <p>  <span style="color:#7A8B9F;">textStyles:</span> { title: {...}, body: {...} }</p>
+        <p><span style="color:#7A8B9F;">pages:</span> [pages/cover.page, ...]</p>
+
+  # 右侧：.page 文件结构
+  - elementId: page-label
+    elementType: text
+    bounds: [620, 360, 400, 26]
+    content:
+      fontSize: 14
+      color: "$secondary"
+      fontFamily: "Liter"
+      letterSpacing: 3
+      wrap: false
+      text: |
+        <p>.page FILE STRUCTURE</p>
+
+  - elementId: page-bg
+    elementType: shape
+    bounds: [620, 398, 600, 185]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$surface"
+
+  - elementId: page-code
+    elementType: text
+    bounds: [640, 410, 560, 170]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.8
+      text: |
+        <p><span style="color:#7A8B9F;">pageType:</span> content       <span style="color:#7A8B9F;"># cover | chapter | content</span></p>
+        <p><span style="color:#7A8B9F;">background:</span></p>
+        <p>  <span style="color:#7A8B9F;">type:</span> solid</p>
+        <p>  <span style="color:#7A8B9F;">color:</span> "$background"</p>
+        <p><span style="color:#7A8B9F;">elements:</span>              <span style="color:#7A8B9F;"># 元素数组，后覆盖先</span></p>
+        <p>  - { elementId, elementType, bounds, ... }</p>
+
+  # 底部路径规则提示
+  - elementId: path-bg
+    elementType: shape
+    bounds: [60, 585, 1160, 45]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#00D4AA10"
+
+  - elementId: path-bar
+    elementType: shape
+    bounds: [60, 585, 4, 45]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: path-text
+    elementType: text
+    bounds: [82, 590, 1118, 35]
+    content:
+      fontSize: 15
+      color: "$text"
+      fontFamily: "Liter, MiSans"
+      lineHeight: 1.5
+      align: [left, middle]
+      text: |
+        <p><strong>路径规则</strong>：<span style="color:#3B6BFF;">pages 列表</span>使用相对路径（相对于 .pptd 所在目录），<span style="color:#00D4AA;">image src</span>使用绝对路径或 http(s) URL</p>
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>09</p>

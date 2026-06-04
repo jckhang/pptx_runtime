@@ -1,0 +1,82 @@
+pageType: chapter
+background:
+  type: solid
+  color: "$background"
+elements:
+  # 左侧大面积色块
+  - elementId: left-block
+    elementType: shape
+    bounds: [0, 0, 500, 720]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  # 半透明大编号
+  - elementId: big-num
+    elementType: text
+    bounds: [40, 180, 420, 200]
+    content:
+      fontSize: 160
+      color: "#FFFFFF15"
+      fontFamily: "Liter"
+      wrap: false
+      text: |
+        <p><strong>01</strong></p>
+
+  # 章节编号（小）
+  - elementId: ch-num
+    elementType: text
+    bounds: [60, 400, 200, 30]
+    content:
+      fontSize: 16
+      color: "#FFFFFF99"
+      fontFamily: "Liter"
+      letterSpacing: 4
+      wrap: false
+      text: |
+        <p>CHAPTER 01</p>
+
+  # 章节标题
+  - elementId: ch-title
+    elementType: text
+    bounds: [560, 280, 600, 60]
+    content:
+      fontSize: 40
+      color: "$text"
+      fontFamily: "Liter, alimamashuheiti"
+      wrap: false
+      text: |
+        <p><strong>Swarm 架构设计</strong></p>
+
+  # 章节描述
+  - elementId: ch-desc
+    elementType: text
+    bounds: [560, 350, 600, 35]
+    content:
+      fontSize: 20
+      color: "$secondary"
+      fontFamily: "Liter, MiSans"
+      wrap: false
+      text: |
+        <p>主代理与子代理的分工协作模式</p>
+
+  # 装饰线
+  - elementId: ch-deco
+    elementType: shape
+    bounds: [560, 410, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$primary"
+
+  # 页码
+  - elementId: page-num
+    elementType: text
+    bounds: [1170, 680, 60, 20]
+    content:
+      style: "$caption"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p>03</p>
